@@ -10,7 +10,7 @@ func SetupRouter() *gin.Engine {
 	r := gin.Default()
 
 	r.GET("/ping", controller.GetPong)
-	r.GET("/cookie", controller.GetCookie)
+	r.GET("/login", controller.GetLogin)
 	r.GET("/content", controller.GetContent)
 
 	return r
