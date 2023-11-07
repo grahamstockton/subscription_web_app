@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import FormCard from "../components/FormCard";
 
 const LoginPage = () => {
 
@@ -55,34 +56,30 @@ const LoginPage = () => {
   }
 
   return (
-    <div className="flex items-center justify-center py-32">
-      <div className="card card-bordered card-normal w-96 bg-base-100 shadow-xl">
-        <div className="card-body items-center text-center">
-          <h2 className="card-title">Please log in</h2>
-          <form onSubmit={handleSubmit}>
-            <input
-              value={username}
-              onChange={e => setUsername(e.target.value)}
-              type="text"
-              placeholder="Username"
-              className="input input-bordered w-full max-w-xs" />
-            <label>{usernameError}</label>
-            <input
-              value={password}
-              onChange={e => setPassword(e.target.value)}
-              type="password"
-              placeholder="Password"
-              className="input input-bordered w-full max-w-xs" />
-            <label>{passwordError}</label>
-            <div className="card-actions w-full">
-              <input type="submit" value="Log In" className="btn btn-primary w-full" />
-            </div>
-            <label>{requestError}</label>
-            <label>{loggedIn}</label>
-          </form>
+    <FormCard>
+      <h2 className="card-title">Log In</h2>
+      <form onSubmit={handleSubmit}>
+        <input
+          value={username}
+          onChange={e => setUsername(e.target.value)}
+          type="text"
+          placeholder="Username"
+          className="input input-bordered w-full max-w-xs my-1" />
+        <label>{usernameError}</label>
+        <input
+          value={password}
+          onChange={e => setPassword(e.target.value)}
+          type="password"
+          placeholder="Password"
+          className="input input-bordered w-full max-w-xs my-1" />
+        <label>{passwordError}</label>
+        <div className="card-actions w-full">
+          <input type="submit" value="Log in" className="btn btn-primary w-full my-1" />
         </div>
-      </div>
-    </div>
+        <label>{requestError}</label>
+        <label>{loggedIn}</label>
+      </form>
+    </FormCard>
   );
 };
 

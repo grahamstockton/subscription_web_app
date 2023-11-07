@@ -1,20 +1,19 @@
 import React from "react";
+import FormCard from "../components/FormCard";
 
 const SignUpPage = () => {
   return (
-    <div className="flex items-center justify-center py-32">
-      <div className="card card-bordered card-normal w-96 bg-base-100 shadow-xl">
-        <div className="card-body items-center text-center">
-          <h2 className="card-title">Please log in</h2>
-          <input type="text" placeholder="Username" className="input input-bordered w-full max-w-xs" />
-          <input type="password" placeholder="Password" className="input input-bordered w-full max-w-xs" />
-          <input type="password" placeholder="Confirm Password" className="input input-bordered w-full max-w-xs" />
-          <div className="card-actions w-full">
-            <button className="btn btn-primary w-full">Log in</button>
-          </div>
+    <FormCard>
+      <h2 className="card-title">Sign Up</h2>
+      <form>
+        <input type="text" placeholder="Username" className="input input-bordered w-full max-w-xs my-1" />
+        <input type="password" placeholder="Password" className="input input-bordered w-full max-w-xs my-1" />
+        <input type="password" placeholder="Confirm Password" className="input input-bordered w-full max-w-xs my-1" />
+        <div className="card-actions w-full">
+          <input type="submit" value="Sign up" className="btn btn-primary w-full my-1" />
         </div>
-      </div>
-    </div>
+      </form>
+    </FormCard>
   );
 };
 
