@@ -1,5 +1,8 @@
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
+# go binary
+/subscription_web_app
+
 # dependencies
 *node_modules*
 /.pnp
